@@ -15,10 +15,10 @@
 		362C1125255834DD00FEA80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362C1123255834DD00FEA80E /* LaunchScreen.storyboard */; };
 		362C1130255834DE00FEA80E /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C112F255834DE00FEA80E /* BinarySearchTreeTests.swift */; };
 		362C113B255834DE00FEA80E /* BinarySearchTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C113A255834DE00FEA80E /* BinarySearchTreeUITests.swift */; };
-		362C114C255834E800FEA80E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C114B255834E800FEA80E /* BinarySearchTree.swift */; };
-		362C114D255834E800FEA80E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C114B255834E800FEA80E /* BinarySearchTree.swift */; };
 		362C1152255834F100FEA80E /* BinaryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C1151255834F100FEA80E /* BinaryNode.swift */; };
 		362C1153255834F100FEA80E /* BinaryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C1151255834F100FEA80E /* BinaryNode.swift */; };
+		362C115D2558371800FEA80E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C115C2558371800FEA80E /* BinarySearchTree.swift */; };
+		362C115E2558371800FEA80E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C115C2558371800FEA80E /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		362C1136255834DE00FEA80E /* BinarySearchTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362C113A255834DE00FEA80E /* BinarySearchTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeUITests.swift; sourceTree = "<group>"; };
 		362C113C255834DE00FEA80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		362C114B255834E800FEA80E /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearchTree.swift; path = ../../TreeNode/TreeNode/BinarySearchTree.swift; sourceTree = "<group>"; };
 		362C1151255834F100FEA80E /* BinaryNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinaryNode.swift; path = ../../TreeNode/TreeNode/BinaryNode.swift; sourceTree = "<group>"; };
+		362C115C2558371800FEA80E /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				362C1118255834DB00FEA80E /* AppDelegate.swift */,
 				362C111A255834DB00FEA80E /* SceneDelegate.swift */,
 				362C111C255834DB00FEA80E /* ViewController.swift */,
-				362C114B255834E800FEA80E /* BinarySearchTree.swift */,
+				362C115C2558371800FEA80E /* BinarySearchTree.swift */,
 				362C1151255834F100FEA80E /* BinaryNode.swift */,
 				362C111E255834DB00FEA80E /* Main.storyboard */,
 				362C1121255834DD00FEA80E /* Assets.xcassets */,
@@ -266,8 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362C114C255834E800FEA80E /* BinarySearchTree.swift in Sources */,
 				362C111D255834DB00FEA80E /* ViewController.swift in Sources */,
+				362C115D2558371800FEA80E /* BinarySearchTree.swift in Sources */,
 				362C1152255834F100FEA80E /* BinaryNode.swift in Sources */,
 				362C1119255834DB00FEA80E /* AppDelegate.swift in Sources */,
 				362C111B255834DB00FEA80E /* SceneDelegate.swift in Sources */,
@@ -278,8 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362C115E2558371800FEA80E /* BinarySearchTree.swift in Sources */,
 				362C1153255834F100FEA80E /* BinaryNode.swift in Sources */,
-				362C114D255834E800FEA80E /* BinarySearchTree.swift in Sources */,
 				362C1130255834DE00FEA80E /* BinarySearchTreeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
