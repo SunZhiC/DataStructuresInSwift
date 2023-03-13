@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tree.traverseInOrder {
             print($0)
-                    
         }
 //        print(tree.description)
 //        let node = creatNode()
@@ -79,7 +78,7 @@ class ViewController: UIViewController {
             while nodesLeftInCurrentLevel > 0 {
                 guard let node = queue.dequeue() else { break }
                 print("\(node.value)", terminator: " ")
-                node.children.forEach({ queue.enqueue($0)})
+                node.children.forEach { queue.enqueue($0) }
                 nodesLeftInCurrentLevel -= 1
             }
             print()

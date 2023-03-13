@@ -23,18 +23,18 @@ extension BinarySearchTree {
     public mutating func insert(_ value: Element) {
         root = insert(from: root, value: value)
     }
-    
+
     private mutating func insert(from node: BinaryNode<Element>?, value: Element) -> BinaryNode<Element> {
         guard let node = node else {
             return BinaryNode(value: value)
         }
-        
+
         if value < node.value {
             node.leftChild = insert(from: node.leftChild, value: value)
         } else {
             node.rightChild = insert(from: node.rightChild, value: value)
         }
-        
+
         return node
     }
 }
@@ -53,14 +53,14 @@ public extension BinarySearchTree {
 //        }
 //        return found
 //    }
-    
+
     func contains(_ value: Element) -> Bool {
         var current = root
         while let node = current {
             if node.value == value {
                 return true
             }
-        
+
             if value < node.value {
                 current = node.leftChild
             } else {
@@ -72,16 +72,14 @@ public extension BinarySearchTree {
 }
 
 extension BinarySearchTree {
-    public mutating func remove(_ value: Element) {
-        
-    }
-    
+    public mutating func remove(_ value: Element) {}
+
     private func remove(node: BinaryNode<Element>?, value: Element) -> BinaryNode<Element>? {
         guard let node = node else {
             return nil
         }
         if value == node.value {
-            if node.leftChild == nil && node.rightChild == nil {
+            if node.leftChild == nil, node.rightChild == nil {
                 return nil
             }
             if node.leftChild == nil {
@@ -92,13 +90,13 @@ extension BinarySearchTree {
             }
             node.value = node.rightChild!.min.value
             node.rightChild = remove(node: node.rightChild, value: node.value)
-            
+
         } else if value < node.value {
             node.leftChild = remove(node: node.leftChild, value: value)
         } else {
             node.rightChild = remove(node: node.rightChild, value: value)
         }
-        
+
         return node
     }
 }
@@ -108,5 +106,3 @@ private extension BinaryNode {
         leftChild?.min ?? self
     }
 }
-
-

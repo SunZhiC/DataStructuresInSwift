@@ -82,7 +82,7 @@ extension Heap {
     }
     
     mutating func siftUp(from index: Int) {
-        var child = index
+        let child = index
         var parent = parentIndex(ofChildAt: child)
         while child > 0, sort(elements[child], elements[parent]) {
             elements.swapAt(child, parent)

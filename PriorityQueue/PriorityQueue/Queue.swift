@@ -75,9 +75,7 @@ public struct PriorityQueueArray<Element: Equatable>: Queue {
         self.elements = elements
         self.sort = sort
         self.elements.sort(by: sort)
-        
     }
-    
 }
 
 extension PriorityQueueArray: CustomStringConvertible {

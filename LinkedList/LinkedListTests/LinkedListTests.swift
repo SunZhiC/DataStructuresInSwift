@@ -98,7 +98,7 @@ class LinkedListTests: XCTestCase {
     
     func testCollection() {
         var list = LinkedList<Int>()
-        for i in 0...9 {
+        for i in 0 ... 9 {
             list.append(i)
         }
         XCTAssertEqual(list[list.startIndex], 0)
@@ -123,8 +123,4 @@ class LinkedListTests: XCTestCase {
         }
         XCTAssertEqual(list2.description, "1=>3")
     }
-    
-    
-    
-    
 }

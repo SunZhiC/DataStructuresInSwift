@@ -12,7 +12,7 @@ public extension RandomAccessCollection where Element: Comparable {
         guard range.lowerBound < range.upperBound else {
             return nil
         }
-        
+
         let size = distance(from: range.lowerBound, to: range.upperBound)
         let middle = index(range.lowerBound, offsetBy: size / 2)
         if self[middle] == value {
@@ -30,7 +30,7 @@ func binarySearch<Elements: RandomAccessCollection>(for element: Elements.Elemen
     guard range.lowerBound < range.upperBound else {
         return nil
     }
-    
+
     let size = collection.distance(from: range.lowerBound, to: range.upperBound)
     let middle = collection.index(range.lowerBound, offsetBy: size / 2)
     if collection[middle] == element {

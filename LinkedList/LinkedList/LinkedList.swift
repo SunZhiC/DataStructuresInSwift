@@ -17,7 +17,6 @@ public struct LinkedList<Value> {
         head == nil
     }
 
-    
     public mutating func copyNodes() {
         guard !isKnownUniquelyReferenced(&head) else {
             return
@@ -37,7 +36,6 @@ public struct LinkedList<Value> {
         }
         
         tail = newNode
-        
     }
     
     private mutating func copyNodes(returningCopyOf node: Node<Value>?) -> Node<Value>? {
@@ -64,12 +62,10 @@ public struct LinkedList<Value> {
         
         return nodeCopy
     }
-    
-    
 }
 
-extension LinkedList {
-    public mutating func push(_ value: Value) {
+public extension LinkedList {
+    mutating func push(_ value: Value) {
         copyNodes()
         head = Node(value: value, next: head)
         if tail == nil {
@@ -77,7 +73,7 @@ extension LinkedList {
         }
     }
     
-    public mutating func append(_ value: Value) {
+    mutating func append(_ value: Value) {
         copyNodes()
         guard !isEmpty else {
             push(value)
@@ -90,7 +86,7 @@ extension LinkedList {
     }
     
     @discardableResult
-    public mutating func insert(_ value: Value, after node: Node<Value>) -> Node<Value> {
+    mutating func insert(_ value: Value, after node: Node<Value>) -> Node<Value> {
         copyNodes()
         guard tail !== node else {
             append(value)
@@ -100,12 +96,11 @@ extension LinkedList {
         return node.next!
     }
     
-    
-    public func node(at index: Int) -> Node<Value>? {
+    func node(at index: Int) -> Node<Value>? {
         var currentNode = head
         var currentIndex = 0
         
-        while currentNode != nil && currentIndex < index {
+        while currentNode != nil, currentIndex < index {
             currentNode = currentNode!.next
             currentIndex += 1
         }
@@ -114,9 +109,9 @@ extension LinkedList {
     }
 }
 
-extension LinkedList {
+public extension LinkedList {
     @discardableResult
-    public mutating func pop() -> Value? {
+    mutating func pop() -> Value? {
         copyNodes()
         
         defer {
@@ -130,7 +125,7 @@ extension LinkedList {
     }
     
     @discardableResult
-    public mutating func removeLast() -> Value? {
+    mutating func removeLast() -> Value? {
         copyNodes()
         guard let head = head else {
             return nil
@@ -154,8 +149,7 @@ extension LinkedList {
     }
     
     @discardableResult
-    public mutating func remove(after node: Node<Value>) -> Value? {
-        
+    mutating func remove(after node: Node<Value>) -> Value? {
         guard let node = copyNodes(returningCopyOf: node) else {
             return nil
         }
@@ -183,7 +177,7 @@ extension LinkedList: Collection {
     public struct Index: Comparable {
         public var node: Node<Value>?
         
-        static public func == (lhs: Index, rhs: Index) -> Bool {
+        public static func == (lhs: Index, rhs: Index) -> Bool {
             switch (lhs.node, rhs.node) {
             case let (left?, right?):
                 return left.next === right.next
@@ -194,7 +188,7 @@ extension LinkedList: Collection {
             }
         }
         
-        static public func < (lhs: Index, rhs: Index) -> Bool {
+        public static func < (lhs: Index, rhs: Index) -> Bool {
             guard lhs != rhs else {
                 return false
             }
@@ -222,7 +216,6 @@ extension LinkedList: Collection {
     public subscript(position: Index) -> Value {
         position.node!.value
     }
-    
 }
 
 extension LinkedList {

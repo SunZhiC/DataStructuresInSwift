@@ -5,11 +5,10 @@
 //  Created by SuniMac on 2020/11/15.
 //
 
-import XCTest
 @testable import BinarySearch
+import XCTest
 
 class BinarySearchTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -38,7 +37,7 @@ class BinarySearchTests: XCTestCase {
         print("binarySearch(for:) \(String(describing: binarySearch31))")
         XCTAssertEqual(search31, binarySearch31)
     }
-    
+
     func testGlobalBinarySearch() {
         let array = [1, 5, 15, 17, 19, 22, 24, 31, 105, 150]
         let search105 = array.firstIndex(of: 105)

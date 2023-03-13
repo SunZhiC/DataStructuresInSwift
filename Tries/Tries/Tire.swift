@@ -11,7 +11,6 @@ public class Trie<CollectionType: Collection> where CollectionType.Element: Hash
     public let root = Node(key: nil, parent: nil)
     public init() {}
     
-    
     public func insert(_ collection: CollectionType) {
         var current = root
         
@@ -49,7 +48,7 @@ public class Trie<CollectionType: Collection> where CollectionType.Element: Hash
         }
         current.isTerminating = false
         
-        while let parent = current.parent, current.children.isEmpty && !current.isTerminating {
+        while let parent = current.parent, current.children.isEmpty, !current.isTerminating {
             parent.children[current.key!] = nil
             current = parent
         }
@@ -84,5 +83,3 @@ public extension Trie where CollectionType: RangeReplaceableCollection {
         return results
     }
 }
-
-

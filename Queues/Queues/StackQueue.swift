@@ -15,7 +15,7 @@ public struct StackQueue<Element>: Queue {
     }
     
     public var peek: Element? {
-        !leftStack.isEmpty ? leftStack.last :  rightStack.first
+        !leftStack.isEmpty ? leftStack.last : rightStack.first
     }
     
     @discardableResult

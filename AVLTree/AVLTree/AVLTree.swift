@@ -77,11 +77,11 @@ extension AVLTree {
         node.leftChild = leftRotate(leftChild)
         return rightRotate(node)
     }
-    
-    private func balanced(_ node:AVLNode<Element>) -> AVLNode<Element> {
+
+    private func balanced(_ node: AVLNode<Element>) -> AVLNode<Element> {
         switch node.balanceFactor {
         case 2:
-            if let leftChild = node.leftChild, leftChild.balanceFactor == -1  {
+            if let leftChild = node.leftChild, leftChild.balanceFactor == -1 {
                 return leftRightRotate(node)
             } else {
                 return rightRotate(node)
@@ -147,10 +147,10 @@ extension AVLTree {
         } else {
             node.rightChild = remove(node: node.rightChild, value: value)
         }
-        
+
         let balancedNode = balanced(node)
         balancedNode.height = max(balancedNode.leftHeight, balancedNode.rightHeight) + 1
-        
+
         return balancedNode
     }
 }
