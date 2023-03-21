@@ -25,8 +25,8 @@ public extension Array where Element == Int {
 
 func testRadixSort() {
     var array = [88, 199, 209, 7, 2223, 23737]
-    print("array = \(array)")
+    print("before sort = \(array)")
     array.radixSort()
-    print("sortedArray = \(array)")
+    print("after sort = \(array)")
 }
 testRadixSort()

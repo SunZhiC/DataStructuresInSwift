@@ -6,7 +6,6 @@ public func mergeSort<Element: Comparable>(_ array: [Element]) -> [Element] {
     let left = mergeSort(Array(array[..<middle]))
     let right = mergeSort(Array(array[middle...]))
     
-    print("left = \(left), right = \(right)")
     return merge(left, right)
 }
 
@@ -46,6 +45,9 @@ private func merge<Element: Comparable>(_ left: [Element], _ right: [Element]) -
 func testMergeSort() {
     let array = [1, 10, 4, 8, 21]
     let sortedArray = mergeSort(array)
-    print(sortedArray)
+    
+    print("before sort: \(array)")
+    print("after sort: \(sortedArray)")
 }
+
 testMergeSort()

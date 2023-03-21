@@ -154,8 +154,10 @@ extension Heap {
 }
 
 func testHeapSort() {
-    let heap = Heap(sort: >, elements: [6, 29, 288, 11, 28])
-    print(heap.sorted())
+    let beforeSort = [6, 29, 288, 11, 28]
+    let afterSort = Heap(sort: >, elements: beforeSort)
+    print("before sort: \(beforeSort)")
+    print("after sort: \(afterSort.sorted())")
 }
 
 testHeapSort()
