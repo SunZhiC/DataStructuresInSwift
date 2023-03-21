@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true'>
+    <pages>
+        <page name='MergeSort'/>
+        <page name='RadixSort'/>
+        <page name='HeapSort'/>
+        <page name='QuickSort'/>
+    </pages>
+</playground>
